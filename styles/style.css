@@ -108,6 +108,7 @@ ol {
 
 .button:active {
   background: #545050;
+  text-decoration: none !important;
 }
 
 .button:hover {
@@ -152,6 +153,11 @@ ol {
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
+}
+
+.search-form__label:active .search-form__label-text,
+.search-form__checkbox:checked + .search-form__pseudo-checkbox + .search-form__label-text {
+  text-decoration: none;
 }
 
 .search-form__textfield {
@@ -215,8 +221,11 @@ ol {
   block-size: 300px;
   overflow-y: auto;
   flex-direction: column;
-  gap: 30px;
   align-self: baseline;
+}
+
+.content__list-item {
+  margin-bottom: 30px;
 }
 
 .content__details {
@@ -244,6 +253,11 @@ ol {
 
 .content__card-link:active {
   background: #545050;
+}
+
+.content__card-link:active .content__video-card-title,
+.content__card-link:active .content__video-card-description {
+  text-decoration: none !important;
 }
 
 .content__card-link:hover .content__video-card-title,
@@ -278,6 +292,12 @@ ol {
 .content__video-card-description {
   font-weight: 400;
   line-height: 90%;
+}
+
+.content__video-card-title, .content__video-card-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
